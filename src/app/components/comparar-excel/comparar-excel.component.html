@@ -1,0 +1,13 @@
+<div class="main-container">
+    <h2>Comparar Archivos de Excel</h2>
+    <p>Este programa exporta en un nuevo archivo de excel los datos del segundo archivo cargado que no se encuentran en
+        el primero, filtrados por un nombre de columna.</p>
+    <p>El nombre de columna debe existir en ambos archivos y los nombres de las columnas deben arrancar en la primera
+        fila, no puede haber filas vacias por encima.</p>
+    <div class="inputs-container">
+        <input class="input" type="file" (change)="onFileChange($event, 1)" />
+        <input class="input" type="file" (change)="onFileChange($event, 2)" />
+        <input class="input name-input" type="text" [(ngModel)]="columnName" placeholder="Nombre de la columna" />
+        <button class="btn" (click)="compareFiles()">Comparar</button>
+    </div>
+</div>
